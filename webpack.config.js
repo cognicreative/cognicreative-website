@@ -1,5 +1,4 @@
 const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
 module.exports = {
@@ -9,13 +8,11 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js?$/,
-      loader: 'babel-loader',
-      exclude: /node_modules/
+      loader: 'babel-loader'
     },
     {
       test: /\.jsx?$/,
-      loader: 'babel-loader',
-      exclude: /node_modules/
+      loader: 'babel-loader'
     },
     {
       test: /\.s?css$/,
@@ -24,12 +21,15 @@ module.exports = {
     {
       test: /\.(jpe?g|png|gif|svg)$/i,
       loader: 'file-loader?name=img/img-[hash:6].[ext]',
-      exclude: /node_modules/
+      exclude: /favicon.png/
     },
     {
       test: /\.html$/,
-      loader: 'html-loader',
-      exclude: /node_modules/
+      loader: 'file-loader?name=index.html'
+    },
+    {
+      test: /favicon.png/,
+      loader: 'file-loader?name=img/favicon.png'
     }
     ]
   },
@@ -39,7 +39,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/dist'),
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'js/bundle.js'
   },
   devServer: {
     contentBase: './dist',
@@ -48,10 +48,6 @@ module.exports = {
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
-    new HtmlWebpackPlugin({
-      template: 'src/index.html',
-      favicon: 'src/assets/images/favicon.png'
-    })
+    new webpack.NoEmitOnErrorsPlugin()
   ]
 }

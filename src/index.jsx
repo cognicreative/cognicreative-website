@@ -1,3 +1,5 @@
+import './index.html'
+import './assets/images/favicon.png'
 import React from 'react'
 import { render } from 'react-dom'
 import configureStore from './store/configureStore'
@@ -5,7 +7,6 @@ import { Provider } from 'react-redux'
 import { BrowserRouter, Route } from 'react-router-dom'
 import { loadMovies } from './actions/movieInfoActions'
 import App from './components/App'
-
 // const store = configureStore()
 
 // 1. Call dispatch on the store with an argument of this action that makes an API request
