@@ -21,6 +21,10 @@ app.get('/css', (request, response) => {
   response.redirect('/')
 })
 
+app.get('/pages', (request, response) => {
+  response.redirect('/')
+})
+
 // Handle 404 - Keep this as a last route
 app.use((req, res, next) => {
   // res.status(400)

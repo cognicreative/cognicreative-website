@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
   entry: [
-    './src/index'
+    './src/imports'
   ],
   module: {
     loaders: [{
@@ -26,7 +26,7 @@ module.exports = {
     },
     {
       test: /\.(jpe?g|png|gif|svg)$/i,
-      loader: 'file-loader?name=img/img-[hash:6].[ext]',
+      loader: 'file-loader?name=img/[name].[ext]',
       exclude: ['/favicon.png/', '/Logo_1024.png/']
     },
     {
@@ -55,7 +55,7 @@ module.exports = {
     new CleanWebpackPlugin(['public'], {
       verbose: true
     }),
-    new ExtractTextPlugin('css/styles.css'),
+    new ExtractTextPlugin('css/style.css'),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
