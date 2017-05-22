@@ -1,5 +1,3 @@
-import './index.html'
-import './assets/images/favicon.png'
 import React from 'react'
 import { render } from 'react-dom'
 import configureStore from './store/configureStore'
