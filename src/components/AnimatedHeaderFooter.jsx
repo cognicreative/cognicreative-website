@@ -19,8 +19,8 @@ class AnimatedHeaderFooter extends Component {
     this.footerHeight = $('#footer').height() + 1
     this.mouseClientY = 0
 
-    this.open = this.open.bind(this)
-    this.close = this.close.bind(this)
+    this.hide = this.hide.bind(this)
+    this.show = this.show.bind(this)
   }
 
   hide () {

@@ -8,6 +8,7 @@ export default class App extends Component {
   render () {
     return (
       <div>
+        <AnimatedHeaderFooter />
         <img className='logo' src={img} />
       </div>
     )
