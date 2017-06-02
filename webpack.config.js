@@ -19,10 +19,10 @@ module.exports = {
     {
       test: /\.s?css$/,
       loader: ExtractTextPlugin
-        .extract({
-          fallback: 'style-loader',
-          use: 'css-loader!sass-loader'
-        })
+          .extract({
+            fallback: 'style-loader',
+            use: 'css-loader!sass-loader'
+          })
     },
     {
       test: /\.(jpe?g|png|gif|svg)$/i,
@@ -52,6 +52,10 @@ module.exports = {
     hot: true
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
     new CleanWebpackPlugin(['public'], {
       verbose: true
     }),

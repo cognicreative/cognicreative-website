@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import AnimatedHeaderFooter from './AnimatedHeaderFooter'
 
 import '../assets/stylesheets/base.scss'
-import img from '../assets/images/Logo_1024.png'
+import img from '../assets/images/Logo_ComingSoon_1024.png'
 
 export default class App extends Component {
   render () {
