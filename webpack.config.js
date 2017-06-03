@@ -19,24 +19,24 @@ module.exports = {
     {
       test: /\.s?css$/,
       loader: ExtractTextPlugin
-        .extract({
-          fallback: 'style-loader',
-          use: 'css-loader!sass-loader'
-        })
+          .extract({
+            fallback: 'style-loader',
+            use: 'css-loader!sass-loader'
+          })
     },
     {
       test: /\.(jpe?g|png|gif|svg)$/i,
       loader: 'file-loader?name=img/[name].[ext]',
-      exclude: ['/favicon.png/', '/Logo_1024.png/']
+      // exclude: ['/favicon.png/', '/Logo_1024.png/']
     },
     {
       test: /\.html$/,
       loader: 'file-loader?name=[name].html'
     },
-    {
-      test: /favicon.png/,
-      loader: 'file-loader?name=img/favicon.png'
-    }
+    // {
+    //   test: /favicon.png/,
+    //   loader: 'file-loader?name=img/favicon.png'
+    // }
     ]
   },
   resolve: {
@@ -52,6 +52,10 @@ module.exports = {
     hot: true
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
     new CleanWebpackPlugin(['public'], {
       verbose: true
     }),
