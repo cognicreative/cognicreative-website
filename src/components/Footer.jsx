@@ -5,10 +5,10 @@ class Footer extends Component {
   render () {
     return (
       <footer>
-        <Navbar inverse fixedBottom id='footer'>
+        <Navbar fixedBottom id='footer'>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href='#'>Animated Footer</a>
+              <p id='footer-text'>Copyright &copy; 2017. All Rights Reserved.</p>
             </Navbar.Brand>
           </Navbar.Header>
         </Navbar>

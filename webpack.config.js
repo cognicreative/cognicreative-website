@@ -1,6 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+// const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
@@ -45,7 +45,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.scss']
+    extensions: ['.css', '.scss', '.js', '.jsx']
   },
   output: {
     path: path.join(__dirname, '/public'),
@@ -65,7 +65,7 @@ module.exports = {
     new CleanWebpackPlugin(['public'], {
       verbose: true
     }),
-    new ExtractTextPlugin('css/style.css'),
+    // new ExtractTextPlugin('css/style.css'),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
