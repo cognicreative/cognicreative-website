@@ -8,7 +8,9 @@
     "dev": "webpack-dev-server --hot --inline --devtool inline-source-map",
     "lint": "eslint src/**",
     "lint:watch": "esw -w src/**",
-    "start": "npm run build && npm run start-prod",
+    "deploy": "npm run build && git push heroku master",
+    "build-start": "npm run build && npm run start-prod",
+    "start": "npm run start-prod",
     "start-prod": "better-npm-run start-prod",
     "test": "mocha --compilers js:babel-core/register ./test/**/*.spec.js --require ignore-styles"
   },
