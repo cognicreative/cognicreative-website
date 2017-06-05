@@ -1,4 +1,7 @@
-$var: #ff1134;
+body {
+  font-family:Quicksand,Arial,sans-serif;
+}
+
 img.logo {
     max-height: 90%;
     max-width: 90%;
@@ -8,4 +11,40 @@ img.logo {
     left: 0;
     right: 0;
     margin: auto;
+}
+
+#logo-icon {
+    min-height: 13%;
+    min-width: 13%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-15%);
+    margin-right: .2em;
+}
+
+#header {
+    background-color: #f5fcff;
+    border-color: #003146;
+}
+
+#header-text {
+    font-family:Audiowide,Arial,sans-serif;
+    font-size: x-large;
+    color: #003146;
+}
+
+#footer {
+    background-color: #f5fcff;
+    border-color: #003146;
+}
+
+#footer-text {
+    font-size: small;
+    color: #000;
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
