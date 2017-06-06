@@ -20,6 +20,8 @@ class AnimateHeaderFooter extends Component {
     this.footerHeight = 0
     this.mouseClientY = 0
 
+    this.dropdownVisible = false
+
     // Bind our methods
     this.hideHeaderFooter = this.hideHeaderFooter.bind(this)
     this.showHeaderFooter = this.showHeaderFooter.bind(this)
@@ -66,7 +68,19 @@ class AnimateHeaderFooter extends Component {
     )
   }
 
+  onDropdownClick () {
+    this.dropdownVisible = true
+  }
+
   hideHeaderFooter () {
+    // Hide Bootstrap dropdown
+    $('.dropdown.open').click()
+
+    // Collapse responsive menu if it is visible and not collapsed
+    if ($('.navbar-toggle').hasClass('collapsed') === false) {
+      $('.navbar-toggle').click()
+    }
+
     $('#header').css('top', (-1 * this.headerHeight) + 'px')
     $('#footer').css('bottom', (-1 * this.footerHeight) + 'px')
   }
