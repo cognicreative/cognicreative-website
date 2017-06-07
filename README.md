@@ -1,2 +1,2 @@
-# cognicreative-website
-CogniCreative website
+# Cognicreative Website
+coming soon...
