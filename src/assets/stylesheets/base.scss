@@ -1,5 +1,5 @@
 body {
-  font-family:Quicksand,Arial,sans-serif;
+    font-family: Quicksand, Arial, sans-serif;
 }
 
 img.logo {
@@ -14,12 +14,18 @@ img.logo {
 }
 
 #github-logo-icon {
-    max-height: 7%;
-    max-width: 7%;
+    max-height: 35%;
+    max-width: 35%;
     right: 0;
     position: relative;
-    top: 50%;
-    transform: translateY(50%);
+    transform: translateY(-10%);
+}
+
+@media (max-width: 768px) {
+    #github-logo-icon {
+        max-height: 5%;
+        max-width: 5%;
+    }
 }
 
 #logo-icon {
@@ -37,7 +43,7 @@ img.logo {
 }
 
 #header-text {
-    font-family:Audiowide,Arial,sans-serif;
+    font-family: Audiowide, Arial, sans-serif;
     font-size: x-large;
     color: #003146;
 }
