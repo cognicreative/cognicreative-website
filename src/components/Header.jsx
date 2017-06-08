@@ -5,6 +5,8 @@ import NavItem from 'react-bootstrap/lib/NavItem'
 import NavDropdown from 'react-bootstrap/lib/NavDropdown'
 import MenuItem from 'react-bootstrap/lib/MenuItem'
 
+import AnimatedNavbar from './AnimatedNavbar'
+
 import logoIconImg from '../assets/images/favicon.png'
 import githubIconImg from '../assets/images/GitHub-Mark-64px.png'
 
@@ -12,7 +14,7 @@ class Header extends Component {
   render () {
     return (
       <header>
-        <Navbar collapseOnSelect fixedTop id='header'>
+        <AnimatedNavbar collapseOnSelect fixedTop id='header'>
           <Navbar.Header>
             <Navbar.Brand>
               <p id='header-text'><img id='logo-icon' src={logoIconImg} />CogniCreative</p>
@@ -31,11 +33,13 @@ class Header extends Component {
                 <MenuItem divider />
                 <MenuItem eventKey={3.4}>Separated link</MenuItem>
               </NavDropdown>
-              <a href='https://github.com/greggpatton/cognicreative-website' target='_blank'><img id='github-logo-icon' src={githubIconImg} /></a>
+              <NavItem eventKey={4} href='#' onClick={(e) => {
+                window.open('https://github.com/greggpatton/cognicreative-website', '_blank')
+              }}><img id='github-logo-icon' src={githubIconImg} /></NavItem>
             </Nav>
           </Navbar.Collapse>
-        </Navbar>
-      </header>
+        </AnimatedNavbar>
+      </header >
     )
   }
 }
