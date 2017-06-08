@@ -1,7 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
 // const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
   entry: [
@@ -61,9 +60,6 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
       fullPage: 'fullpage.js'
-    }),
-    new CleanWebpackPlugin(['public'], {
-      verbose: true
     }),
     // new ExtractTextPlugin('css/style.css'),
     new webpack.optimize.OccurrenceOrderPlugin(),
