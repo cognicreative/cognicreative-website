@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Navbar from 'react-bootstrap/lib/Navbar'
 import PropTypes from 'prop-types'
 import styles from '../assets/stylesheets/header-footer-animate.css'
-import $ from 'jquery'
+// import $ from 'jquery'
 import 'fullpage.js'
 
 const propTypes = {}
